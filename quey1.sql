@@ -1,0 +1,1 @@
+SELECT d.NAME DEPT_NAME, AVG(s.`AMT (USD)`) "AVG_MONTHLY_SALARY (USD)" FROM Department d Join Employee e on d.Id = e.DEPTID join Salaries s on e.ID = s.EMP_ID group by d.name order by AVG(s.`AMT (USD)`) desc limit 3;
